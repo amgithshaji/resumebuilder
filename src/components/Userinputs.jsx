@@ -61,9 +61,9 @@ switch(stepCounts){
         <div>
            <h3> personal Details</h3>
            <div className='row p-3' >
-<TextField id="standard-basic" label="Full Name" variant="standard" />
-<TextField id="standard-basic" label="Job titles" variant="standard" />
-<TextField id="standard-basic" label="Location" variant="standard" />
+<TextField id="standard-basic-name" label="Full Name" variant="standard" />
+<TextField id="standard-basic-job" label="Job titles" variant="standard" />
+<TextField id="standard-basic-location" label="Location" variant="standard" />
            </div>
 
         </div>
@@ -72,11 +72,11 @@ switch(stepCounts){
         <div>
          <h3> Contact Details</h3>
                     <div className='row p-3' >
-<TextField id="standard-basic" label="Email" variant="standard" />
-<TextField id="standard-basic" label="Phone Number" variant="standard" />
-<TextField id="standard-basic" label="Github Profile Link" variant="standard" />
-<TextField id="standard-basic" label="Linkedin Profile Link" variant="standard" />
-<TextField id="standard-basic" label="Portfolio Link" variant="standard" />
+<TextField id="standard-basic-email" label="Email" variant="standard" />
+<TextField id="standard-basic-number" label="Phone Number" variant="standard" />
+<TextField id="standard-basic-github" label="Github Profile Link" variant="standard" />
+<TextField id="standard-basic-linkedin" label="Linkedin Profile Link" variant="standard" />
+<TextField id="standard-basic-portfolio" label="Portfolio Link" variant="standard" />
            </div>
           </div>
     )
@@ -84,10 +84,10 @@ switch(stepCounts){
         <div>
          <h3> Education Details</h3>
                     <div className='row p-3' >
-<TextField id="standard-basic" label="Course Name" variant="standard" />
-<TextField id="standard-basic" label="College Name" variant="standard" />
-<TextField id="standard-basic" label="University" variant="standard" />
-<TextField id="standard-basic" label="Year of Passout" variant="standard" />
+<TextField id="standard-basic-course" label="Course Name" variant="standard" />
+<TextField id="standard-basic-college" label="College Name" variant="standard" />
+<TextField id="standard-basic-university" label="University" variant="standard" />
+<TextField id="standard-basic-passout" label="Year of Passout" variant="standard" />
            </div>
         </div>
     )
@@ -95,10 +95,10 @@ switch(stepCounts){
         <div>
           <h3>Professional Details</h3>
                     <div className='row p-3' >
-<TextField id="standard-basic" label="job or Internship" variant="standard" />
-<TextField id="standard-basic" label="Company Name" variant="standard" />
-<TextField id="standard-basic" label="Company Location" variant="standard" />
-<TextField id="standard-basic" label="Duration" variant="standard" />
+<TextField id="standard-basic-internship" label="job or Internship" variant="standard" />
+<TextField id="standard-basic-company" label="Company Name" variant="standard" />
+<TextField id="standard-basic-company-location" label="Company Location" variant="standard" />
+<TextField id="standard-basic-duration" label="Duration" variant="standard" />
            </div>
         </div>
     )
