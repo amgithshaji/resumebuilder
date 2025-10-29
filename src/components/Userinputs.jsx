@@ -170,7 +170,7 @@ function Userinputs() {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1} </Typography>
+          <Typography sx={ { mt: 2, mb: 1 }}>Step {activeStep + 1} </Typography>
           {/* render content according to the strp */}
           <Box>
             {renderSteps(activeStep)}
