@@ -18,7 +18,7 @@ function Histroy() {
                 <button className='btn btn-danger mb-2 fs-4' ><RiDeleteBin6Line /></button>
                </div>
                <div className='border rounded p-3' >
-                 <img width={'200px'} height={'200px'} src="https://marketplace.canva.com/EAGmJ13p8zE/1/0/1131w/canva-black-and-white-minimalist-professional-resume-a4-X9UHTVTOsqQ.jpg" alt="" />
+                 <img width={'200px'} height={'200px'} src="https://s3.resume.io/uploads/examples/resume/resume_pages/190/persistent-resource/high-school-student-resume-examples.jpg" alt="" />
                </div>
                 </Paper>
             </div>
