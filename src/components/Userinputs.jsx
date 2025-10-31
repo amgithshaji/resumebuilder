@@ -11,31 +11,11 @@ import { useRef } from 'react';
 
 
 const steps = ['basic Information', 'Contact Details', 'Educational Details', 'Work Experience', 'Skills and Certifications', 'Review & Submit'];
-function Userinputs() {
+function Userinputs({resumeDetails,setResumeDetails}) {
   const skillSuggestionArray = ["NODE JS", "REACT", "PYTHON", "EXPRESS JS", "MONGO DB", "JAVASCRIPT", "C++", "COMMUNICATION", "EXCEL", "C"]
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
-  // create state for stroing resume deatils
-  const[resumeDetails,setResumeDetails]= React.useState({
-   username:"", 
-   jobtiles:"",
-   location:"",
-   email:"",
-   mobile:"",
-   github:"",
-   linkedin:"",
-   portfolio:"",
-   course:"", 
-   college:"",
-   university:"",
-   passoutyear:"",
-   Jobtype:"",
-   company:"",
-   clocation:"",
-   duration:"",
-   userSkills:[],
-   summary:""
-  })
+ 
 // refernce to add input tag
  const skillRef = React.useRef()
 
@@ -82,7 +62,7 @@ function Userinputs() {
   const handleReset = () => {
     setActiveStep(0);
   };
-
+// to remove skill
   const removeSkill = (skill)=>{
     setResumeDetails({...resumeDetails,userSkills:resumeDetails.userSkills.filter(item=>item!=skill)})
   }
