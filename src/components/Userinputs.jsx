@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import { FaXmark } from "react-icons/fa6";
 import { useRef } from 'react';
+import { addResumeAPI } from "../services/allAPI";
 
 
 const steps = ['basic Information', 'Contact Details', 'Educational Details', 'Work Experience', 'Skills and Certifications', 'Review & Submit'];
@@ -171,6 +172,30 @@ if (resumeDetails.userSkills.includes(skill)) {
     }
   }
 
+const handleAddresume = async () => {
+  const {username,jobtiles,location} = resumeDetails
+  if(!username && !jobtiles && !location){
+    alert("please fill the form completely...")
+  }else{
+    // api
+    console.log("Api call");
+      try{
+      const result = await addResumeAPI(resumeDetails)
+      console.log(result);
+      
+    }catch(error){
+    console.log(error);
+
+    }
+        // sucess redirect view page
+
+  
+  }
+  
+  
+}
+
+
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={activeStep}>
@@ -224,9 +249,13 @@ if (resumeDetails.userSkills.includes(skill)) {
                 Skip
               </Button>
             )}
-            <Button onClick={handleNext}>
-              {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-            </Button>
+             {
+             activeStep === steps.length - 1 ? 
+             <Button onClick={handleAddresume}>finish</Button>
+              :            
+             <Button onClick={handleNext}>Next</Button>
+             }
+
           </Box>
         </React.Fragment>
       )}
