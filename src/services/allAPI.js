@@ -6,7 +6,11 @@ export const addResumeAPI = async (resume)=>{
     return await commonAPI(`${ServerURL}/resumes`,"POST",resume)
 }
 
-// get resume api
+// get resume api-called from viewresume,when page load
+export const getResumeAPI = async (id)=>{
+    return await commonAPI(`${ServerURL}/resumes/${id}`,"GET",{})
+}
+
 // update resume api
-// get histro api
+// get histroy api
 // remove histroy api

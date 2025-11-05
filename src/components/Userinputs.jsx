@@ -9,6 +9,7 @@ import TextField from '@mui/material/TextField';
 import { FaXmark } from "react-icons/fa6";
 import { useRef } from 'react';
 import { addResumeAPI } from "../services/allAPI";
+import { useNavigate } from 'react-router-dom';
 
 
 const steps = ['basic Information', 'Contact Details', 'Educational Details', 'Work Experience', 'Skills and Certifications', 'Review & Submit'];
@@ -19,6 +20,9 @@ function Userinputs({resumeDetails,setResumeDetails}) {
  
 // refernce to add input tag
  const skillRef = React.useRef()
+
+//  to navigate
+    const naviagte =useNavigate()
 
   console.log(resumeDetails);
   
@@ -178,10 +182,15 @@ const handleAddresume = async () => {
     alert("please fill the form completely...")
   }else{
     // api
-    console.log("Api call");
+    console.log(resumeDetails);
       try{
       const result = await addResumeAPI(resumeDetails)
       console.log(result);
+      if (result.status==201) {
+        alert("resume added successfully")
+        const {id}= result.data
+        naviagte(`/resume/${id}/view`)
+      }
       
     }catch(error){
     console.log(error);
