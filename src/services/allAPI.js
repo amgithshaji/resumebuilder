@@ -17,4 +17,7 @@ export const updateResumeAPI = async (id,resume)=>{
 }
 
 // get histroy api
+export const addHistroyAPI = async (history)=>{
+    return await commonAPI(`${ServerURL}/history`,"POST",history)
+}
 // remove histroy api
