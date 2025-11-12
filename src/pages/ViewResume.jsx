@@ -54,11 +54,11 @@ const imgWidth = pageWidth-20
 const imgHeight = canvas.height*imgWidth/canvas.width
 doc.addImage(resumeImg,'PNG',0,0,imgWidth,imgHeight)
 // download pdf
-doc.save('resume.pdf')
+doc.save(`${resume.username}-resume.pdf`)
 // local time data = new date
 const localtimeData = new Date()
 // console.log(localtimeData);
-const timesStamp = ` ${localtimeData.toLocaleDateString()},${localtimeData.toLocaleDateString()} `
+const timesStamp = ` ${localtimeData.toLocaleDateString()},${localtimeData.toLocaleTimeString()} `
 // console.log(timesstamp);
 try{
 await addHistroyAPI({timesStamp,resumeImg})
@@ -68,6 +68,11 @@ console.log(err);
 }
 
 }
+
+
+
+
+
 
   return (
     <>
